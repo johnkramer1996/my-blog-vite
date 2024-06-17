@@ -1,10 +1,10 @@
-import { setupWorker } from 'msw/browser'
-import { productsHandlers } from './products.handlers'
-import { startSeed } from './seed'
-import { RequestHandler } from 'msw'
+// import { setupWorker } from 'msw/browser'
+// import { postHandlers } from './post.handlers'
+// import { startSeed } from './seed'
+// import { RequestHandler } from 'msw'
 
-const handlers: RequestHandler[] = [...productsHandlers]
+// const handlers: RequestHandler[] = [...postHandlers]
 
-startSeed()
+// startSeed()
 
-export const worker = setupWorker(...handlers)
+// export const worker = setupWorker(...handlers)

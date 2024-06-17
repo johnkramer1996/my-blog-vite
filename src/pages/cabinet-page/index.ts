@@ -1,0 +1,8 @@
+export { CabinetPage } from './CabinetPage'
+export { CabinetDashboard } from './cabinet-dashboard/CabinetDashboard'
+export { CabinetMembersPage } from './cabinet-members/CabinetMembersPage'
+export { CabinetMemberPage } from './cabinet-member/CabinetMemberPage'
+export { CabinetPosts } from './cabinet-posts/CabinenPosts'
+export { CabinetSettings } from './cabinet-settings/CabinetSettings'
+export { CabinetChatListPage } from './cabinet-chat-list/CabinetChatListPage'
+export { CabinetChatPage } from './cabinet-chat/CabinetChatPage'

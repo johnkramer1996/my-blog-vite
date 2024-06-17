@@ -1,4 +1,6 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { PATH_PAGE } from 'shared/lib'
+import { Button } from 'shared/ui'
 
 export const ErrorPage = () => {
   const navigate = useNavigate()
@@ -10,7 +12,7 @@ export const ErrorPage = () => {
         <div className='container text-center'>
           <h1 className='h1 section-title'>Error page</h1>
           <div className='mt-50'>
-            <button onClick={back}>Go back back</button>
+            <Button onClick={back}>Go back back</Button>
           </div>
         </div>
       </div>

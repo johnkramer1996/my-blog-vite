@@ -1,22 +1,28 @@
-import { Link } from 'react-router-dom'
+import { Button, Icon } from 'shared/ui'
+import { Logo } from '../logo/Logo'
+import { PATH_PAGE } from 'shared/lib'
+import { useAppSelector } from 'shared/model'
+import { selectIsAuth } from 'entities/session'
+import { HeaderProfile } from 'widgets'
 import './Header.scss'
-import { MAIN_MENU } from 'shared/lib/paths'
 
 export const Header = () => {
-  const menuItems = MAIN_MENU
+  const isAuth = useAppSelector(selectIsAuth)
 
   return (
     <header className='header'>
-      <div className='container'>
-        <ul>
-          {menuItems.map((el, i) => {
-            return (
-              <li key={i}>
-                <Link to={el.to}>{el.name}</Link>
-              </li>
-            )
-          })}
-        </ul>
+      <div className='container header__line'>
+        <Logo className='header__line-logo' />
+        {isAuth ? (
+          <HeaderProfile className='header-line__profile' />
+        ) : (
+          <>
+            <Button to={PATH_PAGE.signIn} className='header__line-button' color='secondary' size='sm'>
+              Sign in
+              <Icon type='user' right />
+            </Button>
+          </>
+        )}
       </div>
     </header>
   )
