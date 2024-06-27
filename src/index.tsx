@@ -1,2 +1,2 @@
 import './app/App.scss'
-import './app/appEntry'
+import './app/app.entry'

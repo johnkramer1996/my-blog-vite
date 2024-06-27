@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import './Author.scss'
 import classNames from 'classnames'
+import './Author.scss'
 
 type Props = {
   to: string

@@ -1,4 +1,4 @@
-import { Member } from '../../member/model/member.model'
+import { Member } from 'entities/member'
 
 export type CommentId = string
 

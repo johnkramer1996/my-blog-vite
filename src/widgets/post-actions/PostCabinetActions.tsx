@@ -1,5 +1,4 @@
 import { Post } from 'entities/post'
-import { MemberRoleEntity } from 'shared/model'
 import { Icon } from 'shared/ui'
 import { Link } from 'react-router-dom'
 import { PATH_PAGE } from 'shared/lib'

@@ -2,22 +2,22 @@ import { Vote } from './vote'
 
 export type VoteEntity = { points: number; wasUpvotedByMe: boolean; wasDownvotedByMe: boolean }
 
-export const updateVote = <T extends VoteEntity>(post: T, vote: Vote) => {
-  const currentVote = post.wasUpvotedByMe ? 'upvote' : post.wasDownvotedByMe ? 'downvote' : null
+export const updateVote = <T extends VoteEntity>(entity: T, vote: Vote) => {
+  const currentVote = entity.wasUpvotedByMe ? 'upvote' : entity.wasDownvotedByMe ? 'downvote' : null
 
   const isUpvote = vote === 'upvote'
   const isDownvote = vote === 'downvote'
 
   if (!currentVote) {
-    post.points += isUpvote ? 1 : -1
-    post.wasUpvotedByMe = isUpvote
-    post.wasDownvotedByMe = isDownvote
+    entity.points += isUpvote ? 1 : -1
+    entity.wasUpvotedByMe = isUpvote
+    entity.wasDownvotedByMe = isDownvote
     return
   }
   if ((isUpvote && currentVote === 'downvote') || (isDownvote && currentVote === 'upvote')) {
-    post.points += isUpvote ? 1 : -1
-    post.wasUpvotedByMe = false
-    post.wasDownvotedByMe = false
+    entity.points += isUpvote ? 1 : -1
+    entity.wasUpvotedByMe = false
+    entity.wasDownvotedByMe = false
     return
   }
 }
