@@ -17,6 +17,7 @@ const enableMocking = async () => {
   // const { worker } = await import('mocks/browser')
   // return worker.start()
 }
+console.log('change')
 
 enableMocking().then(() => {
   createRoot(root).render(
